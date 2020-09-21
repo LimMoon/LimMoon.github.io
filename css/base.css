@@ -149,22 +149,38 @@ a:hover {
 }
 
 .avatar {
-  text-align: center;
-  padding-bottom: 30px;
-  margin-left: calc(100vw - 100%);
-}
+    display: flex;
+    position: relative;
+  }
 
 .avatar img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-bottom: 0;
+  width: 72px;
+  height: 72px;
 }
 
-.avatar .nickname {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #666;
-  padding-top: 10px;
+.avatar .picture {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 0.8125rem;
+}
+
+.avatar .text {
+  padding-top: 25px;
+  width: 80%;
+  font-size: 1.3rem;
+}
+
+.avatar .author-socials {
+    margin-top: 4px;
 }
 
 .content {
