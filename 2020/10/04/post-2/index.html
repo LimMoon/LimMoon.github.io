@@ -8,7 +8,7 @@
   
 
   
-  <title>Archives: 2020/9 | LimMoon.github.io</title>
+  <title>TIL (201002-04) | LimMoon.github.io</title>
 
   
     <link rel="apple-touch-icon" href="/images/favicon.png" sizes="256x256">
@@ -105,54 +105,167 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-    
-      
-        <!-- 第一篇文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2020</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="TIL (201002-04)">
-        <div class="time-m-d">10-04</div>
-        <div class="title">
-          <a href="/2020/10/04/post-2/">
-            <span>TIL (201002-04)</span>
-          </a>
-        </div>
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">TIL (201002-04)</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="Update time"></i>
+          2020-10-04
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="Tags"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/TIL/" title="TIL">
+                    <b>#</b> TIL
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/Spring/" title="Spring">
+                    <b>#</b> Spring
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
-    
-      
-      <div class="post-item" title="TIL (200925-27)">
-        <div class="time-m-d">09-27</div>
-        <div class="title">
-          <a href="/2020/09/27/post-1/">
-            <span>TIL (200925-27)</span>
-          </a>
-        </div>
+      <div class="markdown-body">
+        <h3 id="개념정리-new"><a href="#개념정리-new" class="headerlink" title=" 개념정리 (new!) "></a><span style="color:pink"> 개념정리 (new!) <span></h3><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a><a href=https://spring.io/>Spring</a></h4><p>Inversion of Control 과 Dependency Injection 을 대표적으로 지원하는 java opensource framework for application development.</p>
+<ul>
+<li>IoC (Inversion of Control): framework가 코드를 불러주는 디자인. 개발자가 짠 custom code가 라이브러리를 부르던 traditional 패턴과 반대되는 개념.</li>
+<li>DI (Dependency Injection): 클라이언트가 디펜던시를 부르는 대신 injector가 클라이언트에게 어떤 서비스를 쓸 지 결정해준다. IoC 패턴에서 쓰이는 테크.</li>
+<li>Spring Boot: autoconfiguration 을 지원하여 쉽게 spring application을 개발하게 도와주는 module.</li>
+<li>Spring MVC: Spring 의 web MVC framework. MVC 패턴은, 사용자의 조작을 controller로 받아오고, controller는 model을 통해서 데이터를 가져오고 view는 그 정보를 바탕으로 시각적으로 표현하여 사용자에게 전달한다.</li>
+<li>Filter vs Interceptor</li>
+<li>Bean: spring managed Java class</li>
+<li>life cycle of a bean:</li>
+</ul>
+<h4 id="REST-api"><a href="#REST-api" class="headerlink" title="REST api"></a>REST api</h4><ul>
+<li>RESTful</li>
+</ul>
+<h4 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h4><ul>
+<li>String buffer vs string builder</li>
+<li>Java vs C</li>
+<li>garbage collection</li>
+</ul>
+<h4 id="OOP"><a href="#OOP" class="headerlink" title="OOP"></a>OOP</h4><ul>
+<li>object oriented vs procedure oriented</li>
+<li>inheritance</li>
+<li>polymorphism</li>
+<li>override vs overload</li>
+<li>interface vs abstract</li>
+</ul>
+<h3 id="Todo"><a href="#Todo" class="headerlink" title=" Todo "></a><span style="color:gray"> Todo </span></h3><ul>
+<li><input checked="" disabled="" type="checkbox"> HackerRank/problem solving/Warmup</li>
+<li><input disabled="" type="checkbox"> 개념정리 완성</li>
+<li><input disabled="" type="checkbox"> data structure-easy</li>
+<li><input disabled="" type="checkbox"> data structure-medium</li>
+</ul>
+
       </div>
-    
       
-      <div class="post-item" title="TIL (200917-20)">
-        <div class="time-m-d">09-20</div>
-        <div class="title">
-          <a href="/2020/09/20/post/">
-            <span>TIL (200917-20)</span>
-          </a>
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2020/09/27/post-1/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="Update time"></i>
+              2020-10-04
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="Tags"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/TIL/" title="TIL">
+                        <b>#</b> TIL
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/Spring/" title="Spring">
+                        <b>#</b> Spring
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
+      
+    </div>
+    
+  <div class="post-catalog" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC-new"><span class="toc-text"> 개념정리 (new!) </span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring"><span class="toc-text">Spring</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REST-api"><span class="toc-text">REST api</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OOP"><span class="toc-text">OOP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Todo"><span class="toc-text"> Todo </span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+  <div id="disqus_thread"></div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://limblog-1.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         <div class="footer">
   <div class="social">
