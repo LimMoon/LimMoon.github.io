@@ -142,6 +142,18 @@
                   </a>
                 </span>
                 
+                <span class="span--tag">
+                  <a href="/tags/JAVA/" title="JAVA">
+                    <b>#</b> JAVA
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/%EC%A0%84%EA%B3%B5%EB%A9%B4%EC%A0%91/" title="전공면접">
+                    <b>#</b> 전공면접
+                  </a>
+                </span>
+                
               </span>
           
       </div>
@@ -157,25 +169,35 @@
 <li>life cycle of a bean:</li>
 </ul>
 <h4 id="REST-api"><a href="#REST-api" class="headerlink" title="REST api"></a>REST api</h4><ul>
-<li>RESTful</li>
+<li>RESTful 이란: representational state transfer (REST) is an architectural style for an application program interface (API) that uses HTTP requests to access and use data. That data can be used to GET, PUT, POST and DELETE data types, which refers to the reading, updating, creating and deleting of operations concerning resources.</li>
+<li>SOAP방식과 REST방식의 차이점은?<br>SOAP(Simple Object Access Protocol) HTTP, HTTPS, SMTP 등을 통해 XML 기반의 메시지를 컴퓨터 네트워크 상에서 교환하는 프로토콜이다. rigid protocol for different programs to be able to communicate. only work with xml formats.<br>REST(Representational State Transfer) was designed for working with media components, files etc. architectural pattern. flexible, works wih plain text, xml, html, json</li>
 </ul>
 <h4 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h4><ul>
-<li>String buffer vs string builder</li>
-<li>Java vs C</li>
-<li>garbage collection</li>
+<li>String buffer vs string builder<br>stringbuffer is threadsafe, but less efficient.</li>
+<li>Java vs C<br>java 는 jvm 을 사용하여 os independent. compiled byte code (.class file) is platform independent.<br>c is procedural programming language, following top down approach. program is divided into smaller functions. java is object oriented. program is divided into classes, and classes provide data hiding.</li>
+<li>garbage collection<br>java has automatic memory management. deletes unreferenced data on the heap</li>
+<li>hashCode method? equals 차이<br>equals() method is used to compare equality of two Objects<br>hashCode() method returns the hashcode value as an Integer. Hashcode value is mostly used in hashing based collections like HashMap, HashSet, HashTable.. This method must be overridden in every class which overrides equals() method.</li>
+<li>jpa vs hibernate<br>jpa (Java persistence API) is like a bridge between java model class and relation db layer. jpa is a standard way of ORM (Object relational mapping). Hibernate is an implementation of jpa, an ORM tool. this framework is used to store java objects in relational db system.</li>
+<li>JDBC vs ODBC<br>ODBC: open database connectivity, for window platform<br>JDBC: JAVA database connectivity, for java language. JAVA API to connect and execute the query with database</li>
+</ul>
+<h4 id="General"><a href="#General" class="headerlink" title="General"></a>General</h4><ul>
+<li>heap vs stack in memory allocation<br>stack memory allocation happens during function call stack. size of allocation is known to compiler. when function call is over, stack gets popped. heap memory is allocated during execution of instruction written by the programmer. need to be allocated and deallocated, otherwise memory leak can happen</li>
+<li>HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap</li>
 </ul>
 <h4 id="OOP"><a href="#OOP" class="headerlink" title="OOP"></a>OOP</h4><ul>
-<li>object oriented vs procedure oriented</li>
-<li>inheritance</li>
-<li>polymorphism</li>
-<li>override vs overload</li>
-<li>interface vs abstract</li>
+<li>object oriented vs procedure oriented<br>c is procedural programming language, following top down approach. program is divided into smaller functions. java is object oriented. program is divided into classes, and classes provide data hiding.</li>
+<li>inheritance<br>Inheritance is one in which a new class is created that inherits the properties of the already exist class. It supports the concept of code reusability and reduces the length of the code in object-oriented programming.</li>
+<li>polymorphism<br>Polymorphism is that in which we can perform a task in multiple forms or ways. It is applied to the functions or methods. Polymorphism allows the object to decide which form of the function to implement at compile-time as well as run-time.<br>Types of Polymorphism are:</li>
+<li><ul>
+<li>Compile-time polymorphism (Method overloading)</li>
 </ul>
-<h3 id="Todo"><a href="#Todo" class="headerlink" title=" Todo "></a><span style="color:gray"> Todo </span></h3><ul>
-<li><input checked="" disabled="" type="checkbox"> HackerRank/problem solving/Warmup</li>
-<li><input disabled="" type="checkbox"> 개념정리 완성</li>
-<li><input disabled="" type="checkbox"> data structure-easy</li>
-<li><input disabled="" type="checkbox"> data structure-medium</li>
+</li>
+<li><ul>
+<li>Run-time polymorphism (Method Overriding)</li>
+</ul>
+</li>
+<li>override vs overload<br>Overriding means having two methods with the same method name and parameters (i.e., method signature). One of the methods is in the parent class and the other is in the child class. Overriding allows a child class to provide a specific implementation of a method that is already provided its parent class. Overloading occurs when two or more methods in one class have the same method name but different parameters.</li>
+<li>interface vs abstract<br>An abstract class allows you to create functionality that subclasses can implement or override. An interface only allows you to define functionality, not implement it. And whereas a class can extend only one abstract class, it can take advantage of multiple interfaces. A Java interface can be implemented using keyword “implements” and abstract class can be extended using keyword “extends”. Members of a Java interface are public by default. A Java abstract class can have class members like private, protected, etc.n interface can extend another Java interface only, an abstract class can extend another Java class and implement multiple Java interfaces.</li>
 </ul>
 
       </div>
@@ -210,10 +232,27 @@
                       </a>
                     </span>
                     
+                    <span class="span--tag">
+                      <a href="/tags/JAVA/" title="JAVA">
+                        <b>#</b> JAVA
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%EC%A0%84%EA%B3%B5%EB%A9%B4%EC%A0%91/" title="전공면접">
+                        <b>#</b> 전공면접
+                      </a>
+                    </span>
+                    
                   </span>
               
           </div>
           <div class="post-foot-prev">
+            
+              <a href="/2020/10/11/post-3/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
             
           </div>
         </div>
@@ -223,7 +262,7 @@
   <div class="post-catalog" id="catalog">
     <div class="title">Contents</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC-new"><span class="toc-text"> 개념정리 (new!) </span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring"><span class="toc-text">Spring</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REST-api"><span class="toc-text">REST api</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OOP"><span class="toc-text">OOP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Todo"><span class="toc-text"> Todo </span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC-new"><span class="toc-text"> 개념정리 (new!) </span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring"><span class="toc-text">Spring</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REST-api"><span class="toc-text">REST api</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#General"><span class="toc-text">General</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OOP"><span class="toc-text">OOP</span></a></li></ol></li></ol>
     </div>
   </div>
 
