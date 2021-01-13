@@ -8,7 +8,7 @@
   
 
   
-  <title>TIL (201009-12) | LimMoon.github.io</title>
+  <title>Archives | LimMoon.github.io</title>
 
   
     <link rel="apple-touch-icon" href="/images/favicon.png" sizes="256x256">
@@ -105,218 +105,141 @@
 
 
       <div class="flex-container">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
+<!-- last: 按年份把文章分组，当前遍历到的年份 -->
+<!-- now: 当前遍历到的文章的发布年份 -->
 
-
-  
-
-  
-
-  
-
-  
-  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
-  <div class="container post-details" id="post-details">
-    <div class="post-content">
-      <div class="post-title">TIL (201009-12)</div>
-      <div class="post-attach">
-        <span class="post-pubtime">
-          <i class="iconfont icon-updatetime" title="Update time"></i>
-          2020-10-11
-        </span>
-        
-              <span class="post-tags">
-                <i class="iconfont icon-tags" title="Tags"></i>
-                
-                <span class="span--tag">
-                  <a href="/tags/TIL/" title="TIL">
-                    <b>#</b> TIL
-                  </a>
-                </span>
-                
-                <span class="span--tag">
-                  <a href="/tags/algorithm/" title="algorithm">
-                    <b>#</b> algorithm
-                  </a>
-                </span>
-                
-              </span>
-          
-      </div>
-      <div class="markdown-body">
-        <p>행복한 롱위캔! 매주 주 4일 근무 했으면 좋겠다… 하고픈게 너무 많은데 시간이 없쟈나… 나는 매일 툴링 오토메이션을 하는데 왜 근무일수는 줄어들지를 않을까 ㅠㅠ</p>
-<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title=" Algorithm "></a><span style="color:pink"> Algorithm <span></h3><p>이번주엔 해커랭크 문제를 풀어보았다.</p>
-<h4 id="Common-Child"><a href="#Common-Child" class="headerlink" title="Common Child"></a>Common Child</h4><p><a href=https://www.hackerrank.com/challenges/common-child/problem>해커랭크 코딩테스트</a><br>문자열 에서 한 개 또는 그 이상의 character를 제거해서 만들 수 있는 문자열을 child라고 할 때, 두 문자열의 가장 긴 common child의 길이는?</p>
-<p>이 문제는 <a href=https://en.wikipedia.org/wiki/Longest_common_subsequence_problem>LCS(Longest Common Subsequence)</a> 문제이다. LCS 문제는 Dynamic Programming을 이용해서 subproblem들로 나눠 풀 수 있다.</p>
-<p>두 input string을 a,b 라고 하고, subproblem case를 정리해보자면,</p>
-<ol>
-<li>a[0] b[0]의 default 값은 0으로 둔다.</li>
-<li>a[i] == b[i] 일때, lcs(a[i-1],b[i-1]) + 1</li>
-<li>a[i] != b[i] 일때, max(lcs(a[i-1],b[i]), lcs(a[i], b[i-1]))</li>
-</ol>
-<p>매트릭스를 이용해서 이 값을 a[0] b[0] 부터 찾아서 subproblem 결과를 합산한다. 합산할때는 비교해서 max를 킵하면 된다.</p>
-<p>최초로 나타나는 같은 문자를 찾을 때 까지 문자열을 iterate 하면 된다. 예를 들어 COMPUTE 라는 문자열과 CMPT 가 있을때 아래 매트릭스처럼 채워나가서 iterate이 끝났을 떄의 맥스를 리턴하면 결과값이 나온다.</p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">c</th>
-<th align="center">m</th>
-<th align="center">p</th>
-<th align="center">t</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">C</td>
-<td align="center"><strong>lcs()’’,’’)+1</strong></td>
-<td align="center">max(lcs(cm,’’), lcs(c,c))</td>
-<td align="center">…</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">O</td>
-<td align="center">max(lcs(co,’’), lcs(c,c))</td>
-<td align="center">max(lcs(co,c), lcs(c,cm))</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">M</td>
-<td align="center">max(lcs(com,’’), lcs(co,c))</td>
-<td align="center"><strong>lcs(co,cm)+1</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">P</td>
-<td align="center">…</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">U</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">T</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">E</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int lcs[][] &#x3D; new int[s1.length()+1][s2.length()+1];</span><br><span class="line">for(int i &#x3D; 0; i &lt;&#x3D; s1.length(); i++)&#123;</span><br><span class="line">    for(int j &#x3D; 0; j &lt;&#x3D; s2.length(); j++)&#123;</span><br><span class="line">        if(i&#x3D;&#x3D;0 || j&#x3D;&#x3D;0)</span><br><span class="line">            lcs[i][j]&#x3D;0;</span><br><span class="line">        else if(s1.charAt(i-1) &#x3D;&#x3D; s2.charAt(j-1))&#123;</span><br><span class="line">            lcs[i][j] &#x3D; lcs[i-1][j-1]+1;</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            lcs[i][j] &#x3D; Math.max(lcs[i-1][j], lcs[i][j-1]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">return lcs[s1.length()][s2.length()];</span><br></pre></td></tr></table></figure>
-
-<p><a href=https://github.com/LimMoon/Algorithm/blob/master/commonChild/Solution.java>full solution link</a></p>
-<h3 id="A-philosophy-of-software-design-by-John-Ousterhout"><a href="#A-philosophy-of-software-design-by-John-Ousterhout" class="headerlink" title=" A philosophy of software design  by John Ousterhout"></a><span style="color:pink"> A philosophy of software design </span> by John Ousterhout</h3><h4 id="Chapter-3-Workiing-Code-Isn’t-Enough"><a href="#Chapter-3-Workiing-Code-Isn’t-Enough" class="headerlink" title="Chapter 3. Workiing Code Isn’t Enough"></a>Chapter 3. Workiing Code Isn’t Enough</h4><h5 id="Tactical-Programming"><a href="#Tactical-Programming" class="headerlink" title="Tactical Programming"></a>Tactical Programming</h5><p>taking shortcuts to deliver features asap. faster, but short sighted</p>
-<h5 id="Strategic-Programming"><a href="#Strategic-Programming" class="headerlink" title="Strategic Programming"></a>Strategic Programming</h5><p>working code isn’t enough. produce great design that works. fix design flaws, don’t ignore or patch.<br>Good design is not free. make continuous small investments.</p>
-
-      </div>
+<div class="container archives">
+  <div class="post-list">
+    
+    
       
-        <div class="prev-or-next">
-          <div class="post-foot-next">
-            
-              <a href="/2020/10/04/post-2/" target="_self">
-                <i class="iconfont icon-chevronleft"></i>
-                <span>Prev</span>
-              </a>
-            
-          </div>
-          <div class="post-attach">
-            <span class="post-pubtime">
-              <i class="iconfont icon-updatetime" title="Update time"></i>
-              2020-10-11
-            </span>
-            
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags" title="Tags"></i>
-                    
-                    <span class="span--tag">
-                      <a href="/tags/TIL/" title="TIL">
-                        <b>#</b> TIL
-                      </a>
-                    </span>
-                    
-                    <span class="span--tag">
-                      <a href="/tags/algorithm/" title="algorithm">
-                        <b>#</b> algorithm
-                      </a>
-                    </span>
-                    
-                  </span>
-              
-          </div>
-          <div class="post-foot-prev">
-            
-              <a href="/2020/10/18/post-4/" target="_self">
-                <span>Next</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
-            
-          </div>
+        <!-- 第一篇文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2021</span>
+          </h2>
         </div>
       
-    </div>
+      <div class="post-item" title="post">
+        <div class="time-m-d">01-05</div>
+        <div class="title">
+          <a href="/2021/01/05/post-10/">
+            <span>post</span>
+          </a>
+        </div>
+      </div>
     
-  <div class="post-catalog" id="catalog">
-    <div class="title">Contents</div>
-    <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Algorithm"><span class="toc-text"> Algorithm </span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Common-Child"><span class="toc-text">Common Child</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-philosophy-of-software-design-by-John-Ousterhout"><span class="toc-text"> A philosophy of software design  by John Ousterhout</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Chapter-3-Workiing-Code-Isn%E2%80%99t-Enough"><span class="toc-text">Chapter 3. Workiing Code Isn’t Enough</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Tactical-Programming"><span class="toc-text">Tactical Programming</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Strategic-Programming"><span class="toc-text">Strategic Programming</span></a></li></ol></li></ol></li></ol>
-    </div>
-  </div>
-
-  
-<script src="/js/catalog.js"></script>
-
-
-
-
+      
+      <div class="post-item" title="재외동포의 한국취업기">
+        <div class="time-m-d">01-02</div>
+        <div class="title">
+          <a href="/2021/01/02/post-9/">
+            <span>재외동포의 한국취업기</span>
+          </a>
+        </div>
+      </div>
     
-      <div class="comments-container">
-        
-  <div id="disqus_thread"></div>
-  <script>
-
-  /**
-  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-  /*
-  var disqus_config = function () {
-  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-  */
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://limblog-1.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-
-
-
+      
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2020</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="이직일기 4 - 두 달 반 준비해서 아마존 뚫는 법 (꿀팁 다수)">
+        <div class="time-m-d">12-28</div>
+        <div class="title">
+          <a href="/2020/12/28/post-8/">
+            <span>이직일기 4 - 두 달 반 준비해서 아마존 뚫는 법 (꿀팁 다수)</span>
+          </a>
+        </div>
+      </div>
+    
+      
+      <div class="post-item" title="이직일기 3 - 사직서는 처음이라">
+        <div class="time-m-d">12-17</div>
+        <div class="title">
+          <a href="/2020/12/17/post-7/">
+            <span>이직일기 3 - 사직서는 처음이라</span>
+          </a>
+        </div>
+      </div>
+    
+      
+      <div class="post-item" title="이직일기 2 - 결전의 날">
+        <div class="time-m-d">10-25</div>
+        <div class="title">
+          <a href="/2020/10/25/post-6/">
+            <span>이직일기 2 - 결전의 날</span>
+          </a>
+        </div>
+      </div>
+    
+      
+      <div class="post-item" title="이직일기 1 - 지원하게 된 계기와 과정">
+        <div class="time-m-d">10-22</div>
+        <div class="title">
+          <a href="/2020/10/22/post-5/">
+            <span>이직일기 1 - 지원하게 된 계기와 과정</span>
+          </a>
+        </div>
+      </div>
+    
+      
+      <div class="post-item" title="TIL (201016-18)">
+        <div class="time-m-d">10-18</div>
+        <div class="title">
+          <a href="/2020/10/18/post-4/">
+            <span>TIL (201016-18)</span>
+          </a>
+        </div>
+      </div>
+    
+      
+      <div class="post-item" title="TIL (201009-12)">
+        <div class="time-m-d">10-12</div>
+        <div class="title">
+          <a href="/2020/10/12/post-3/">
+            <span>TIL (201009-12)</span>
+          </a>
+        </div>
+      </div>
+    
+      
+      <div class="post-item" title="TIL (201002-04)">
+        <div class="time-m-d">10-05</div>
+        <div class="title">
+          <a href="/2020/10/05/post-2/">
+            <span>TIL (201002-04)</span>
+          </a>
+        </div>
+      </div>
+    
+      
+      <div class="post-item" title="TIL (200925-27)">
+        <div class="time-m-d">09-27</div>
+        <div class="title">
+          <a href="/2020/09/27/post-1/">
+            <span>TIL (200925-27)</span>
+          </a>
+        </div>
+      </div>
+    
+      
+      <div class="post-item" title="TIL (200917-20)">
+        <div class="time-m-d">09-21</div>
+        <div class="title">
+          <a href="/2020/09/21/post/">
+            <span>TIL (200917-20)</span>
+          </a>
+        </div>
       </div>
     
   </div>
-
+</div>
 
         <div class="footer">
   <div class="social">

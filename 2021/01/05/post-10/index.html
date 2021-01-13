@@ -8,7 +8,7 @@
   
 
   
-  <title>TIL (201002-04) | LimMoon.github.io</title>
+  <title>post | LimMoon.github.io</title>
 
   
     <link rel="apple-touch-icon" href="/images/favicon.png" sizes="256x256">
@@ -120,92 +120,22 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">TIL (201002-04)</div>
+      <div class="post-title">post</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2020-10-04
+          2021-01-05
         </span>
         
-              <span class="post-tags">
-                <i class="iconfont icon-tags" title="Tags"></i>
-                
-                <span class="span--tag">
-                  <a href="/tags/TIL/" title="TIL">
-                    <b>#</b> TIL
-                  </a>
-                </span>
-                
-                <span class="span--tag">
-                  <a href="/tags/Spring/" title="Spring">
-                    <b>#</b> Spring
-                  </a>
-                </span>
-                
-                <span class="span--tag">
-                  <a href="/tags/JAVA/" title="JAVA">
-                    <b>#</b> JAVA
-                  </a>
-                </span>
-                
-                <span class="span--tag">
-                  <a href="/tags/%EC%A0%84%EA%B3%B5%EB%A9%B4%EC%A0%91/" title="전공면접">
-                    <b>#</b> 전공면접
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
-        <h3 id="개념정리-new"><a href="#개념정리-new" class="headerlink" title=" 개념정리 (new!) "></a><span style="color:pink"> 개념정리 (new!) <span></h3><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a><a href=https://spring.io/>Spring</a></h4><p>Inversion of Control 과 Dependency Injection 을 대표적으로 지원하는 java opensource framework for application development.</p>
-<ul>
-<li>IoC (Inversion of Control): framework가 코드를 불러주는 디자인. 개발자가 짠 custom code가 라이브러리를 부르던 traditional 패턴과 반대되는 개념.</li>
-<li>DI (Dependency Injection): 클라이언트가 디펜던시를 부르는 대신 injector가 클라이언트에게 어떤 서비스를 쓸 지 결정해준다. IoC 패턴에서 쓰이는 테크.</li>
-<li>Spring Boot: autoconfiguration 을 지원하여 쉽게 spring application을 개발하게 도와주는 module.</li>
-<li>Spring MVC: Spring 의 web MVC framework. MVC 패턴은, 사용자의 조작을 controller로 받아오고, controller는 model을 통해서 데이터를 가져오고 view는 그 정보를 바탕으로 시각적으로 표현하여 사용자에게 전달한다.</li>
-<li>Filter vs Interceptor</li>
-<li>Bean: spring managed Java class</li>
-<li>life cycle of a bean:</li>
-</ul>
-<h4 id="REST-api"><a href="#REST-api" class="headerlink" title="REST api"></a>REST api</h4><ul>
-<li>RESTful 이란: representational state transfer (REST) is an architectural style for an application program interface (API) that uses HTTP requests to access and use data. That data can be used to GET, PUT, POST and DELETE data types, which refers to the reading, updating, creating and deleting of operations concerning resources.</li>
-<li>SOAP방식과 REST방식의 차이점은?<br>SOAP(Simple Object Access Protocol) HTTP, HTTPS, SMTP 등을 통해 XML 기반의 메시지를 컴퓨터 네트워크 상에서 교환하는 프로토콜이다. rigid protocol for different programs to be able to communicate. only work with xml formats.<br>REST(Representational State Transfer) was designed for working with media components, files etc. architectural pattern. flexible, works wih plain text, xml, html, json</li>
-</ul>
-<h4 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h4><ul>
-<li>String buffer vs string builder<br>stringbuffer is threadsafe, but less efficient.</li>
-<li>Java vs C<br>java 는 jvm 을 사용하여 os independent. compiled byte code (.class file) is platform independent.<br>c is procedural programming language, following top down approach. program is divided into smaller functions. java is object oriented. program is divided into classes, and classes provide data hiding.</li>
-<li>garbage collection<br>java has automatic memory management. deletes unreferenced data on the heap</li>
-<li>hashCode method? equals 차이<br>equals() method is used to compare equality of two Objects<br>hashCode() method returns the hashcode value as an Integer. Hashcode value is mostly used in hashing based collections like HashMap, HashSet, HashTable.. This method must be overridden in every class which overrides equals() method.</li>
-<li>jpa vs hibernate<br>jpa (Java persistence API) is like a bridge between java model class and relation db layer. jpa is a standard way of ORM (Object relational mapping). Hibernate is an implementation of jpa, an ORM tool. this framework is used to store java objects in relational db system.</li>
-<li>JDBC vs ODBC<br>ODBC: open database connectivity, for window platform<br>JDBC: JAVA database connectivity, for java language. JAVA API to connect and execute the query with database</li>
-</ul>
-<h4 id="General"><a href="#General" class="headerlink" title="General"></a>General</h4><ul>
-<li>heap vs stack in memory allocation<br>stack memory allocation happens during function call stack. size of allocation is known to compiler. when function call is over, stack gets popped. heap memory is allocated during execution of instruction written by the programmer. need to be allocated and deallocated, otherwise memory leak can happen</li>
-<li>HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap</li>
-</ul>
-<h4 id="OOP"><a href="#OOP" class="headerlink" title="OOP"></a>OOP</h4><ul>
-<li>object oriented vs procedure oriented<br>c is procedural programming language, following top down approach. program is divided into smaller functions. java is object oriented. program is divided into classes, and classes provide data hiding.</li>
-<li>inheritance<br>Inheritance is one in which a new class is created that inherits the properties of the already exist class. It supports the concept of code reusability and reduces the length of the code in object-oriented programming.</li>
-<li>polymorphism<br>Polymorphism is that in which we can perform a task in multiple forms or ways. It is applied to the functions or methods. Polymorphism allows the object to decide which form of the function to implement at compile-time as well as run-time.<br>Types of Polymorphism are:</li>
-<li><ul>
-<li>Compile-time polymorphism (Method overloading)</li>
-</ul>
-</li>
-<li><ul>
-<li>Run-time polymorphism (Method Overriding)</li>
-</ul>
-</li>
-<li>override vs overload<br>Overriding means having two methods with the same method name and parameters (i.e., method signature). One of the methods is in the parent class and the other is in the child class. Overriding allows a child class to provide a specific implementation of a method that is already provided its parent class. Overloading occurs when two or more methods in one class have the same method name but different parameters.</li>
-<li>interface vs abstract<br>An abstract class allows you to create functionality that subclasses can implement or override. An interface only allows you to define functionality, not implement it. And whereas a class can extend only one abstract class, it can take advantage of multiple interfaces. A Java interface can be implemented using keyword “implements” and abstract class can be extended using keyword “extends”. Members of a Java interface are public by default. A Java abstract class can have class members like private, protected, etc.n interface can extend another Java interface only, an abstract class can extend another Java class and implement multiple Java interfaces.</li>
-</ul>
-
+        
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2020/09/27/post-1/" target="_self">
+              <a href="/2021/01/02/post-9/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -214,63 +144,17 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2020-10-04
+              2021-01-05
             </span>
             
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags" title="Tags"></i>
-                    
-                    <span class="span--tag">
-                      <a href="/tags/TIL/" title="TIL">
-                        <b>#</b> TIL
-                      </a>
-                    </span>
-                    
-                    <span class="span--tag">
-                      <a href="/tags/Spring/" title="Spring">
-                        <b>#</b> Spring
-                      </a>
-                    </span>
-                    
-                    <span class="span--tag">
-                      <a href="/tags/JAVA/" title="JAVA">
-                        <b>#</b> JAVA
-                      </a>
-                    </span>
-                    
-                    <span class="span--tag">
-                      <a href="/tags/%EC%A0%84%EA%B3%B5%EB%A9%B4%EC%A0%91/" title="전공면접">
-                        <b>#</b> 전공면접
-                      </a>
-                    </span>
-                    
-                  </span>
-              
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/2020/10/11/post-3/" target="_self">
-                <span>Next</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
       
     </div>
     
-  <div class="post-catalog" id="catalog">
-    <div class="title">Contents</div>
-    <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC-new"><span class="toc-text"> 개념정리 (new!) </span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring"><span class="toc-text">Spring</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REST-api"><span class="toc-text">REST api</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#General"><span class="toc-text">General</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OOP"><span class="toc-text">OOP</span></a></li></ol></li></ol>
-    </div>
-  </div>
-
-  
-<script src="/js/catalog.js"></script>
-
-
-
 
     
       <div class="comments-container">
